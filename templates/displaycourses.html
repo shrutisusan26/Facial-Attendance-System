@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>My courses </title>
+{% endblock %}
+
+{% block body %}
+<main role="main">
+<div class="jumbotron">
+<h1 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;text-align: center;text-shadow: darkblue;color:Blue;"> My Courses </h1>
+  {% for courses in data %}
+      {{ courses.course_id }} -
+          {{ courses.course_name }} <br>
+     <a class="btn btn-primary" href="/regscourse/{{id}}/{{courses.course_id}}" role="button">Register Student &raquo;</a>
+     <a class="btn btn-danger" href="/attendance/{{id}}/{{courses.course_id}}" role="button"> Take Attendance  &raquo;</a> <br>
+    <hr>
+    {% endfor %}
+  <a class="btn btn-primary" href="/registercourses/{{id}}" role="button">Register More Courses &raquo;</a>
+</div>
+</main>
+{% endblock %}

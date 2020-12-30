@@ -1,0 +1,18 @@
+
+{% extends 'base.html' %}
+{% block title %}
+<title> Register Students </title>
+{% endblock %}
+{% block body %}
+<h1 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;text-align: center;text-shadow: darkblue;color:Blue;"><i><b> SignUp</b></i></h1>
+{% from "_formhelpers.html" import render_field %}
+    <form method="post" action="/registerstudents" enctype="multipart/form-data" >
+    <div class="form-group">
+        {{ render_field(form.student_id) }}
+        {{ render_field(form.name) }}
+        {{ render_field(form.email) }}
+        {{ render_field(form.phoneNo)}}
+        {{ render_field(form.photo) }} <br>
+        <p><input type=submit value="Next"  class= "btn btn-primary"></p></div>
+    </form>
+{% endblock %}

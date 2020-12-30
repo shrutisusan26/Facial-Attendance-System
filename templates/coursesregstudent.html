@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{% endblock %}
+
+{% block body %}
+<h1 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;text-align: center;text-shadow: darkblue;color:Blue;"><i><b> Register Student for {{ id1 }} </b></i></h1>
+
+    <form action='/regscourse/{{id2}}/{{id1}}' method="POST"  >
+        <div class="form-group">
+        <br>
+        <label for="student_id" style= "text-align: left;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-style: italic;color: black; font-size:larger;" >Student ID</label><br>
+        <input  type="text" name='student_id' id='student_id' class="form-control" value={{request.form.student_id}}>
+        <br><br>
+        <input type="submit" value="Save" class="btn btn-primary">
+        </div>
+    </form>
+{% endblock %}

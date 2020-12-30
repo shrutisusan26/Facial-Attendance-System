@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{% endblock %}
+
+{% block body %}
+<h1 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;text-align: center;text-shadow: darkblue;color:Blue;"><i><b> Login</b></i></h1>
+
+    <form action='/login' method="POST">
+        <div class="form-group">
+        <br>
+        <label for="username" style="text-align: left;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-style: italic;color: black; font-size:larger;">Username</label><br>
+        <input  type="text" name='username' id='username' class="form-control" value={{request.form.username}}>
+        <br><br>
+        <label for="password" style= "text-align: left;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-style: italic;color: black; font-size:larger;" >Password</label><br>
+        <input  type="text" name='password' id='password' class="form-control" value={{request.form.password}}>
+        <br><br>
+        <input type="submit" value="Save" class="btn btn-primary">
+        </div>
+    </form>
+{% endblock %}

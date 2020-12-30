@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{% endblock %}
+
+{% block body %}
+<h1 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;text-align: center;text-shadow: darkblue;color:Blue;"><i><b> Register Courses</b></i></h1>
+
+    <form action='/registercourses/{{id}}' method="POST">
+        <div class="form-group">
+        <br>
+        <label for="course_id" style= "text-align: left;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-style: italic;color: black; font-size:larger;" >Course ID</label><br>
+        <input  type="text" name='course_id' id='course_id' class="form-control" value={{request.form.course_id}}>
+        <br><br>
+        <input type="submit" value="Save" class="btn btn-primary">
+        </div>
+    </form>
+{% endblock %}
